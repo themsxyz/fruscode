@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Fruxcode | Premium Hosting & Website Templates</title>
+  <!-- Tailwind CSS v3 + Font Awesome Icons + Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'Segoe UI', 'sans-serif'],
+          },
+          boxShadow: {
+            'premium': '0 20px 35px -12px rgba(0, 0, 0, 0.15)',
+            'card-hover': '0 25px 40px -12px rgba(0, 0, 0, 0.25)',
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-gray-100 font-sans antialiased">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200 shadow-sm">
+    <div class="container mx-auto px-5 lg:px-8 py-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-700 flex items-center justify-center shadow-md">
+          <span class="text-white font-bold text-xl">F</span>
+        </div>
+        <span class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-teal-800">Frux<span class="text-gray-800">Code</span></span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-gray-600 font-medium">
+        <a href="#" class="hover:text-emerald-700 transition">Home</a>
+        <a href="#" class="hover:text-emerald-700 transition">Domains</a>
+        <a href="#" class="hover:text-emerald-700 transition">Hosting</a>
+        <a href="#" class="hover:text-emerald-700 transition">Templates</a>
+        <a href="#" class="hover:text-emerald-700 transition">Support</a>
+      </nav>
+      <div class="flex gap-3">
+        <button class="hidden sm:block px-5 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50 transition text-sm font-medium">Login</button>
+        <button class="px-5 py-2 rounded-full bg-emerald-700 text-white hover:bg-emerald-800 transition shadow-sm text-sm font-medium">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-5"></div>
+    <div class="container mx-auto px-5 lg:px-8 py-16 lg:py-24 relative z-2">
+      <div class="max-3xl mx-auto text-center animate-fade-in-up">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold tracking-wide mb-5">🚀 Fruxcode Premium Hosting + Website Templates</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">Hosting & Domains<br> <span class="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">with Ultimate Warranty</span></h1>
+        <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mt-6">Get custom design, admin panel, student dashboard & ultimate database. 4 to 10 year warranty based on your package. Power your next big idea.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a href="#packages" class="px-8 py-3.5 rounded-full bg-emerald-700 text-white font-semibold shadow-lg hover:bg-emerald-800 transition transform hover:scale-105">Explore Packages →</a>
+          <a href="#" class="px-8 py-3.5 rounded-full border border-gray-300 bg-white text-gray-700 font-semibold hover:bg-gray-50 transition">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section (5 Cards) with Taka Price -->
+  <section id="packages" class="py-20 px-5 lg:px-8">
+    <div class="container mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Choose your <span class="text-emerald-700">Performance Tier</span></h2>
+        <p class="text-gray-500 mt-3">All prices in Taka (TK). Plans include source code, custom design & full warranty. Extended warranty up to 10 years.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-7">
+        <!-- Package 1: Starter Edge (price 12,990 TK) -->
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-slate-800 to-slate-700 p-5 text-white">
+            <h3 class="text-xl font-bold">Starter Edge</h3>
+            <div class="mt-2 text-3xl font-black">TK 12,990<span class="text-sm font-normal opacity-80">/one-time</span></div>
+            <div class="text-xs bg-white/20 inline-block px-2 py-1 rounded-full mt-2">4 Year Warranty</div>
+          </div>
+          <div class="p-5 flex-1 space-y-3 text-gray-600 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Hosting + Domain (.com/.in)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Source code maintain (4 yrs)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Custom design (responsive)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Admin panel (basic)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Student panel (limited)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Dashboard (core metrics)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> MySQL database (1GB)</div>
+          </div>
+          <div class="p-5 pt-0"><button class="w-full py-2.5 rounded-xl bg-gray-900 text-white font-medium hover:bg-emerald-800 transition select-package" data-package="Starter Edge" data-price="12990">Get Starter</button></div>
+        </div>
+
+        <!-- Package 2: Pro Vision (price 19,890 TK) -->
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-emerald-800 to-emerald-700 p-5 text-white">
+            <h3 class="text-xl font-bold">Pro Vision</h3>
+            <div class="mt-2 text-3xl font-black">TK 19,890<span class="text-sm font-normal opacity-80">/one-time</span></div>
+            <div class="text-xs bg-white/20 inline-block px-2 py-1 rounded-full mt-2">6 Year Warranty</div>
+          </div>
+          <div class="p-5 flex-1 space-y-3 text-gray-600 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Hosting + Premium Domain</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Source code maintain (6 yrs)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Custom design + 3 template options</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Admin panel (advanced roles)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Student panel (progress tracker)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Dashboard (analytics + charts)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Enhanced DB (5GB + backups)</div>
+          </div>
+          <div class="p-5 pt-0"><button class="w-full py-2.5 rounded-xl bg-emerald-700 text-white font-medium hover:bg-emerald-800 transition select-package" data-package="Pro Vision" data-price="19890">Get Pro Vision</button></div>
+        </div>
+
+        <!-- Package 3: Business Elite (price 21,570 TK) -->
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col hover:-translate-y-2 relative">
+          <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">MOST POPULAR</div>
+          <div class="bg-gradient-to-r from-teal-800 to-teal-900 p-5 text-white">
+            <h3 class="text-xl font-bold">Business Elite</h3>
+            <div class="mt-2 text-3xl font-black">TK 21,570<span class="text-sm font-normal opacity-80">/one-time</span></div>
+            <div class="text-xs bg-white/20 inline-block px-2 py-1 rounded-full mt-2">7 Year Warranty</div>
+          </div>
+          <div class="p-5 flex-1 space-y-3 text-gray-600 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Hosting + Domain + SSL</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Source code maintain (7 yrs)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Custom UI/UX + 5 templates</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Full admin panel (analytics)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Student panel + course access</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Real-time dashboard + reports</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Ultimate database (10GB, Redis)</div>
+          </div>
+          <div class="p-5 pt-0"><button class="w-full py-2.5 rounded-xl bg-teal-700 text-white font-medium hover:bg-teal-800 transition select-package" data-package="Business Elite" data-price="21570">Choose Elite</button></div>
+        </div>
+
+        <!-- Package 4: Ultimate Max (price 25,550 TK) -->
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-slate-900 to-gray-900 p-5 text-white">
+            <h3 class="text-xl font-bold">Ultimate Max</h3>
+            <div class="mt-2 text-3xl font-black">TK 25,550<span class="text-sm font-normal opacity-80">/one-time</span></div>
+            <div class="text-xs bg-white/20 inline-block px-2 py-1 rounded-full mt-2">8 Year Warranty</div>
+          </div>
+          <div class="p-5 flex-1 space-y-3 text-gray-600 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Hosting + Domain + Wildcard SSL</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Source code maintain (8 yrs)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Bespoke design + unlimited revisions</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Admin panel (super admin + roles)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Student panel (AI progress)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Dashboard (custom widgets)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Ultimate DB cluster (20GB)</div>
+          </div>
+          <div class="p-5 pt-0"><button class="w-full py-2.5 rounded-xl bg-gray-900 text-white font-medium hover:bg-emerald-800 transition select-package" data-package="Ultimate Max" data-price="25550">Go Ultimate</button></div>
+        </div>
+
+        <!-- Package 5: Enterprise Titan (price 30,290 TK) -->
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col hover:-translate-y-2">
+          <div class="bg-gradient-to-r from-amber-800 to-orange-800 p-5 text-white">
+            <h3 class="text-xl font-bold">Enterprise Titan</h3>
+            <div class="mt-2 text-3xl font-black">TK 30,290<span class="text-sm font-normal opacity-80">/one-time</span></div>
+            <div class="text-xs bg-white/20 inline-block px-2 py-1 rounded-full mt-2">10 Year Warranty</div>
+          </div>
+          <div class="p-5 flex-1 space-y-3 text-gray-600 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Hosting + Domain + Enterprise SSL</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Source code maintain (10 yrs)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Custom design + unlimited templates</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Full admin panel + API access</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Student panel + gamification</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Enterprise dashboard (AI insights)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 text-lg">✓</span> Ultimate DB + auto-scaling (50GB)</div>
+          </div>
+          <div class="p-5 pt-0"><button class="w-full py-2.5 rounded-xl bg-amber-700 text-white font-medium hover:bg-amber-800 transition select-package" data-package="Enterprise Titan" data-price="30290">Contact Sales</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Deep Dive: Warranty & Panels / Dashboard Section -->
+  <section class="py-16 bg-white rounded-t-3xl rounded-b-3xl shadow-inner">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 space-y-6">
+          <div class="inline-flex rounded-full bg-emerald-100 px-4 py-1.5 text-emerald-700 text-sm font-semibold">✨ Core Advantages</div>
+          <h2 class="text-3xl font-bold text-gray-900">Warranty that grows <br> with your investment</h2>
+          <p class="text-gray-600">Depending on your package, you get 4 to 10 years of <strong>source code maintenance, security patches, and feature updates.</strong> All plans include a complete custom design, dedicated admin dashboard and student panel based on tier.</p>
+          <ul class="space-y-3">
+            <li class="flex gap-3 items-start"><span class="text-emerald-600 text-xl">⚡</span> <span><strong class="text-gray-800">Admin Panel:</strong> Manage users, analytics, content — from basic to super-admin levels.</span></li>
+            <li class="flex gap-3 items-start"><span class="text-emerald-600 text-xl">🎓</span> <span><strong class="text-gray-800">Student Panel:</strong> Track courses, assignments, performance metrics, interactive dashboard.</span></li>
+            <li class="flex gap-3 items-start"><span class="text-emerald-600 text-xl">📊</span> <span><strong class="text-gray-800">Ultimate Database:</strong> MySQL/PostgreSQL with scalable storage, automatic backups, and query optimization.</span></li>
+            <li class="flex gap-3 items-start"><span class="text-emerald-600 text-xl">🛡️</span> <span><strong class="text-gray-800">4-10 Year Warranty:</strong> Full code maintenance, bug fixing & hosting stability.</span></li>
+          </ul>
+          <button class="mt-4 px-6 py-2.5 bg-gray-900 text-white rounded-xl hover:bg-emerald-800 transition shadow">Compare All Features →</button>
+        </div>
+        <div class="order-1 md:order-2 bg-gradient-to-br from-gray-50 to-emerald-50 p-6 rounded-2xl shadow-premium border border-emerald-100">
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="flex justify-between items-center border-b pb-2 mb-3">
+              <span class="font-mono text-sm font-bold text-emerald-800">📋 Dashboard Preview</span>
+              <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Live Metrics</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-gray-50 p-2 rounded"><span class="text-gray-500">Total Sites</span><div class="font-bold text-lg">24</div></div>
+              <div class="bg-gray-50 p-2 rounded"><span class="text-gray-500">Uptime</span><div class="font-bold text-lg">99.98%</div></div>
+              <div class="bg-gray-50 p-2 rounded"><span class="text-gray-500">Warranty left</span><div class="font-bold text-lg">8 yrs</div></div>
+              <div class="bg-gray-50 p-2 rounded"><span class="text-gray-500">DB Storage</span><div class="font-bold text-lg">14/50 GB</div></div>
+            </div>
+            <div class="mt-4 h-2 w-full bg-gray-200 rounded-full overflow-hidden"><div class="bg-emerald-600 w-3/4 h-full rounded-full"></div></div>
+            <p class="text-xs text-gray-400 mt-3 text-center">*Actual dashboard depends on package tier (Student/Admin insights)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bKash Payment Section -->
+  <section class="py-16 bg-gradient-to-r from-emerald-50 to-teal-50">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-premium overflow-hidden border border-emerald-200">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="p-8 bg-emerald-700 text-white flex flex-col justify-center">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/bKash_Logo.svg/1200px-bKash_Logo.svg.png" alt="bKash" class="h-10 bg-white rounded-lg p-1">
+              <span class="text-2xl font-bold">bKash</span>
+            </div>
+            <h3 class="text-2xl font-bold">Easy & Secure Payment</h3>
+            <p class="mt-2 text-emerald-100">Pay via bKash to activate your hosting package instantly. After payment, our team will verify and deliver your custom design, admin panel, and source code.</p>
+            <div class="mt-6 bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
+              <p class="text-sm font-mono">Merchant: <strong class="text-lg">Fruxcode</strong></p>
+              <p class="text-sm font-mono mt-1">bKash Number: <strong class="text-xl tracking-wider">880 1568-031009</strong></p>
+              <p class="text-xs mt-2 opacity-80">Send exact amount with your email/order ID as reference</p>
+            </div>
+          </div>
+          <div class="p-8 bg-white">
+            <h4 class="text-xl font-bold text-gray-800 flex items-center gap-2"><span class="text-emerald-600">💳</span> Complete Your Order</h4>
+            <p class="text-gray-500 text-sm mt-1">Select a package and pay via bKash to get started.</p>
+            
+            <div class="mt-6 space-y-4">
+              <div class="bg-gray-50 rounded-xl p-4">
+                <label class="block text-sm font-medium text-gray-700">Selected Package</label>
+                <div class="mt-1 font-bold text-gray-900" id="selectedPackageDisplay">None selected</div>
+                <div class="mt-1 text-sm text-gray-500" id="selectedPriceDisplay">—</div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700">Your Email (for delivery)</label>
+                <input type="email" id="userEmail" placeholder="you@example.com" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-emerald-500 focus:border-emerald-500">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700">bKash Transaction ID (after payment)</label>
+                <input type="text" id="transactionId" placeholder="8ZK7A9X2" class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-emerald-500 focus:border-emerald-500">
+              </div>
+              
+              <button id="confirmPaymentBtn" class="w-full py-3 rounded-xl bg-emerald-700 text-white font-bold hover:bg-emerald-800 transition shadow-md flex items-center justify-center gap-2">
+                <span>💰</span> Confirm Payment
+              </button>
+              <p class="text-xs text-gray-400 text-center mt-3">After payment confirmation, we'll deliver hosting credentials, source code & dashboard access within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Website Templates & Custom Design Showcase -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-5 lg:px-8 text-center">
+      <span class="text-emerald-600 font-semibold tracking-wide">WEBSITE TEMPLATES</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Modern, Responsive & Fully Editable</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Each hosting package comes with free access to premium website templates. Custom design for business, education, ecommerce, portfolio — tailored to your brand.</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+          <div class="h-32 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-700 text-4xl">🏢</div>
+          <h3 class="font-bold text-lg mt-4">Business Pro</h3>
+          <p class="text-sm text-gray-500">Corporate, agency & service ready</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+          <div class="h-32 bg-teal-100 rounded-lg flex items-center justify-center text-teal-700 text-4xl">🎓</div>
+          <h3 class="font-bold text-lg mt-4">EduCampus</h3>
+          <p class="text-sm text-gray-500">LMS + student portal template</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+          <div class="h-32 bg-amber-100 rounded-lg flex items-center justify-center text-amber-700 text-4xl">🛍️</div>
+          <h3 class="font-bold text-lg mt-4">MarketHub</h3>
+          <p class="text-sm text-gray-500">eCommerce & dynamic storefront</p>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <div class="bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium text-gray-700">⚡ 100+ component blocks</div>
+        <div class="bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium text-gray-700">📱 Mobile-first design</div>
+        <div class="bg-white px-5 py-2 rounded-full shadow-sm text-sm font-medium text-gray-700">🔧 Drag & drop builder support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / Trust -->
+  <section class="py-16">
+    <div class="container mx-auto px-5 text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-emerald-600 font-semibold">Trusted by 3,200+ creators & businesses</p>
+        <div class="mt-8 bg-white p-8 rounded-2xl shadow-md">
+          <div class="flex justify-center gap-1 text-amber-400 text-xl">★★★★★</div>
+          <p class="italic text-gray-600 mt-3">“The 10-year warranty gave us full confidence. The admin panel and student dashboard are game-changers for our academy. Plus the custom template design is stunning!”</p>
+          <p class="mt-4 font-bold">— Ananya Sharma, EduTech Founder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 rounded-t-2xl">
+    <div class="container mx-auto px-5 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center"><span class="text-white font-bold">F</span></div><span class="text-white text-xl font-bold">FruxCode</span></div>
+          <p class="text-sm mt-3">Domain & hosting solutions with robust warranty, custom designs and powerful dashboards. Payment via bKash: 880 1568-031009</p>
+        </div>
+        <div><h5 class="text-white font-semibold mb-3">Hosting</h5><ul class="space-y-2 text-sm"><li>Shared Hosting</li><li>VPS Hosting</li><li>Dedicated Servers</li><li>Domain Registration</li></ul></div>
+        <div><h5 class="text-white font-semibold mb-3">Support</h5><ul class="space-y-2 text-sm"><li>24/7 Tech Support</li><li>Warranty Claims</li><li>Source Code Maintain</li><li>Knowledge Base</li></ul></div>
+        <div><h5 class="text-white font-semibold mb-3">Legal</h5><ul class="space-y-2 text-sm"><li>Terms of Service</li><li>Privacy Policy</li><li>Refund Policy</li><li>SLA</li></ul></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">© 2025 Fruxcode — Empowering digital futures. All rights reserved. bKash: 880 1568-031009</div>
+    </div>
+  </footer>
+
+  <!-- Interactive JS: Package selection & Payment confirmation -->
+  <script>
+    // Package selection handling
+    let selectedPackage = null;
+    let selectedPrice = null;
+
+    const packageButtons = document.querySelectorAll('.select-package');
+    const selectedPackageDisplay = document.getElementById('selectedPackageDisplay');
+    const selectedPriceDisplay = document.getElementById('selectedPriceDisplay');
+    const confirmBtn = document.getElementById('confirmPaymentBtn');
+    const userEmailInput = document.getElementById('userEmail');
+    const transactionIdInput = document.getElementById('transactionId');
+
+    packageButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const pkg = this.getAttribute('data-package');
+        const price = this.getAttribute('data-price');
+        selectedPackage = pkg;
+        selectedPrice = price;
+        selectedPackageDisplay.innerText = pkg;
+        selectedPriceDisplay.innerText = `TK ${parseInt(price).toLocaleString()} (one-time)`;
+        // Scroll to payment section smoothly
+        document.querySelector('#payment-section, .bg-gradient-to-r.from-emerald-50').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+
+    // Confirm payment with bKash simulation
+    confirmBtn.addEventListener('click', function() {
+      if (!selectedPackage) {
+        alert('❌ Please select a hosting package first by clicking "Get Starter" or any package button.');
+        return;
+      }
+      const email = userEmailInput.value.trim();
+      const transactionId = transactionIdInput.value.trim();
+      
+      if (!email) {
+        alert('📧 Please enter your email address so we can deliver your package details.');
+        return;
+      }
+      if (!transactionId) {
+        alert(`💳 Please make a payment of TK ${parseInt(selectedPrice).toLocaleString()} to bKash number 880 1568-031009 and enter the transaction ID.`);
+        return;
+      }
+      
+      // Simple validation: transaction ID length > 3
+      if (transactionId.length < 4) {
+        alert('⚠️ Please enter a valid bKash transaction ID (minimum 4 characters).');
+        return;
+      }
+      
+      // Show success message
+      alert(`✅ Payment confirmation received!\n\nPackage: ${selectedPackage}\nAmount: TK ${parseInt(selectedPrice).toLocaleString()}\nTransaction ID: ${transactionId}\nEmail: ${email}\n\nOur team will verify and send hosting credentials, source code, admin/student panel access and custom design within 24 hours.\n\nThank you for choosing Fruxcode!`);
+      
+      // Reset form (optional)
+      transactionIdInput.value = '';
+      userEmailInput.value = '';
+      selectedPackage = null;
+      selectedPrice = null;
+      selectedPackageDisplay.innerText = 'None selected';
+      selectedPriceDisplay.innerText = '—';
+    });
+  </script>
+</body>
+</html>
